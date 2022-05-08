@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class ItemServiceArrBoundsExcTest {
     ItemService is = new ItemService();
-    File input_arr_bound_exc = new File("src\\test\\resources\\items_arr_bound_ex.csv");
+    File input_arr_bound_exc = new File("src/test/resources/items_arr_bound_ex.csv");
 
     @DisplayName("Testing array index out of bounds exception with all items")
     @Test

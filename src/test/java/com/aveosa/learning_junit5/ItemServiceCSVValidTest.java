@@ -28,7 +28,7 @@ public class ItemServiceCSVValidTest {
     @Test
     public void testCsvValidationExcAll() {
         assertThrows(CsvValidationException.class, () -> {
-            File InvalidCsvFile = new File("src\\test\\resources\\items_invalid_CSV.csv");
+            File InvalidCsvFile = new File("src/test/resources/items_invalid_CSV.csv");
             is.readAllItems(InvalidCsvFile);
         });
     }
@@ -37,7 +37,7 @@ public class ItemServiceCSVValidTest {
     @Test
     public void testCsvValidationExcOne() {
         assertThrows(CsvValidationException.class, () -> {
-            File InvalidCsvFile = new File("src\\test\\resources\\items_invalid_CSV.csv");
+            File InvalidCsvFile = new File("src/test/resources/items_invalid_CSV.csv");
             is.readSingleItem("1212", InvalidCsvFile);
         });
     }

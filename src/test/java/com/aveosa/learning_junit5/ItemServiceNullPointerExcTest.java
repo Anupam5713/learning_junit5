@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class ItemServiceNullPointerExcTest {
 
-    File input_file = new File("src\\test\\resources\\items.csv");
+    File input_file = new File("src/test/resources/items.csv");
 
     @SuppressWarnings("null")
     @DisplayName("tests the null pointer exception")

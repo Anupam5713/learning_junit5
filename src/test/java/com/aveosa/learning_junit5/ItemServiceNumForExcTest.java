@@ -21,12 +21,12 @@ public class ItemServiceNumForExcTest {
     @DisplayName("Tests number format exception")
     @Test
     public void testNumberForEx() {
-        File num_for_ex_file = new File("src\\test\\resources\\items_num_for_ex.csv");
+        File num_for_ex_file = new File("src/test/resources/items_num_for_ex.csv");
         assertThrows(NumberFormatException.class, () -> {
             is.readAllItems(num_for_ex_file);
         });
         assertThrows(NumberFormatException.class, () -> {
-            is.readSingleItem("1213", num_for_ex_file);
+            is.readSingleItem("string", num_for_ex_file);
         });
     }
 }

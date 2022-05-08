@@ -15,7 +15,7 @@ import com.opencsv.exceptions.CsvValidationException;
 public class ItemServiceExpOutTest {
     ItemService is = new ItemService();
     File actual_input_file = new File(
-            "src\\test\\resources\\items.csv");
+            "src/test/resources/items.csv");
 
     @DisplayName("tests reading all the items from CSV")
     @Test
@@ -71,7 +71,7 @@ public class ItemServiceExpOutTest {
     @Test
     public void testEmptyOutput() throws CsvValidationException, IOException {
         File empty_file = new File(
-                "src\\test\\resources\\null_items.csv");
+                "src/test/resources/null_items.csv");
         List<ItemModel> actual;
         actual = is.readAllItems(empty_file);
         List<ItemModel> expected = new ArrayList<ItemModel>();
@@ -83,7 +83,7 @@ public class ItemServiceExpOutTest {
     public void testInputFound() throws CsvValidationException, IOException {
         ItemModel expected = new ItemModel();
         File input_unava = new File(
-                "src\\test\\resources\\item_not_found.csv");
+                "src/test/resources/item_not_found.csv");
         assertEquals(is.readSingleItem("1211", input_unava), expected);
     }
 }
